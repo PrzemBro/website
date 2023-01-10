@@ -400,86 +400,63 @@ section.nav div{
     margin: 0 0 0 50px;
     text-align: left;
 }
-section.nav p, .about p .contact p{
+section.nav p{
     font-size: 1.4em;
     color: #fff;
 }
 section.nav p:first-child{
     font-size: 2.2em;
 }
-.contact p:first-child{
-    font-size: 1.6em;
-}
-section.nav i, .contact i{
+section.nav i{
     font-size: 1.6em;
     vertical-align: -3px;
     margin-right: 8px;
 }
-section.nav div p:last-child i, .contact p:last-child i{
+section.nav div p:last-child i{
     margin-right: 4px;
 }
-section.nav div p:first-child, .contact p:first-child{
+section.nav div p:first-child{
     margin-bottom: 20px;
 }
-section.nav div p:nth-child(2), .contact p:nth-child(2){
+section.nav div p:nth-child(2){
     margin-bottom: 10px;
     font-weight: 600;
 }
+
 .mainContainer{
-    position: fixed;
+    position:absolute;
     align-items: center;
     top:0;
     left: 0;
     width: 100%;
     height: 100vh;
 }
+
 .about{
     display: none;
     position: absolute;
-    width: 90%;
-    /* height: 100vh; */
+    width: 80%;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
-    /* font-size: 1.4em; */
     color:#fff;
-    text-align: center;
-    /* background-color: rgba(51, 51, 51, 0.4); */
-    
+    text-align: center;    
 }
+
 .about.active{
     display: block;
 }
 
-/* .about div{
-    position: absolute;
-    left:50%;
-    top:70%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50vh;
-    background-image: url("img/PBLogo_2.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
-
 .about img{
-    /* position: absolute; */
-    /* bottom: 30px; */
-    /* left: 30px; */
     width: 90%;
 }
+
 .about p{
-    /* position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%); */
-    /* background-color: rgba(51, 51, 51, 0.4); */
     margin: 20px auto;
     font-size: 1.3em;
     line-height: 1.8;
     width: 100%;
+    text-align: left;
 }
 
 .services{
@@ -495,24 +472,13 @@ section.nav div p:nth-child(2), .contact p:nth-child(2){
 .services.active{
     display: block;
 }
-.services div:first-child{
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100vh;
-    background-image: url("");
-    background-position: center;
-    background-size: cover;
-}
 .services div:last-child{
     position: absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.4);
+    /* background-color: rgba(51, 51, 51, 0.4); */
 }
 .services i{
     position: absolute;
@@ -539,28 +505,52 @@ section.nav div p:nth-child(2), .contact p:nth-child(2){
     text-transform: uppercase;
     color: #fff;
 }
+.services img{
+    height: 20vw;
+    margin: 20px 20px 0 20px;
+}
 .services p{
-    margin:20px 5%;
-    font-size: 1.4em;
-    color:#fff;
+    margin: 20px auto;
+    font-size: 1.3em;
+    line-height: 1.8;
+    width: 80%;
+    color: #fff;
+    text-align: left;
 }
 .contact{
     display: none;
     position: absolute;
-    width: 90%;
+    width: 80%;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
-    font-size: 1.4em;
     color: #fff;
     text-align: center;
 }
+.contact img{
+    width: 90%;
+}
+.contact p{
+    margin: 20px auto;
+    font-size: 1.3em;
+    line-height: 1.8;
+    width: 100%;
+    text-align: left;
+}
+.contact p:last-child{
+    font-size: 1.4em;
+    font-weight: 700;
+}
 .contact i{
-    vertical-align: -6px;
+    margin-right: 5px;
+    vertical-align: -4px;
+    font-size: 1.6em;
 }
 .contact.active{
     display:block;
 }
+
+
 @media(min-width: 768px){
     section.nav p{
         font-size: 1.7em;

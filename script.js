@@ -129,12 +129,12 @@ window.addEventListener('mousemove', function (e) {
 
 
 // main script
-const servicePic = ['url("img/web desktop.png")', 'url("img/Retouch 3840x2160.png")']; // 'url("img/interior  3840x2160.png")'
-const servicePicMid = ['url("img/web 1024x1000.png")', 'url("img/Retouch 1024x1000.png")']; // 'url("img/interior 1024x1000.png")'
-const servicePicLow = ['url("img/web 600x1000.png")', 'url("img/Retouch 600 x1000.png")']; // 'url("img/interior 600x1000.png")'
+const servicePic = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior  3840x2160.png")'
+const servicePicMid = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior 1024x1000.png")'
+const servicePicLow = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior 600x1000.png")'
 const serviceHeader = ["Web design", "Retouching"]; // "3d design"
-const serviceText = ["I am a front-end developer experienced in creating modern, static websites. My goal is to provide the best quality services and customer satisfaction by creating aesthetically pleasing and functional websites that meet customers requirements and expectations. I handle website design and development from scratch, as well as modernization and optimization. I use the latest technologies and tools such as HTML, CSS, and JavaScript to ensure the best results. In addition. In addition I specialize in creating animated backgrounds with HTML canvas and personalized icons that will capture the attention of visitors and set the website apart from others", "I have solid experience in retouching, color correcting and image processing all range of photos for e-commerce as well for magazines such as Prevention, Maxim, Glamour, Men's Health, Rolling Stone, Vogue, Vanity Fair, Allure, National Geographic. With my skills and experience, I am able to handle the most demanding photo retouching tasks and provide the best results. Whether you need photos for your online store, magazine, or web - my services are perfect for you"]; // "product presentation, interior visualisation, real estate visualisation"
-const serviceImg = document.querySelector('.services div');
+const serviceText = ["I am a front-end developer experienced in creating modern, static websites. I handle website design and development from scratch, as well as modernization and optimization. I use the latest technologies and tools such as HTML, CSS, and JavaScript to ensure the best results. In addition I specialize in creating animated backgrounds with HTML canvas and personalized icons that will capture the attention of visitors and make your website stand out from others", "I have solid experience in retouching, color correcting and image processing wide range of photos for e-commerce and notable magazines such as Prevention, Maxim, Glamour, Men's Health, Rolling Stone, Vogue, Vanity Fair, Allure, National Geographic. With my skills and experience, I am able to handle the most demanding photo retouching tasks and provide the best results. Whether you need photos for your online store, magazine, or web, my services are perfect for you"]; // "product presentation, interior visualisation, real estate visualisation"
+const serviceImg = document.querySelector('.services img');
 const serviceH1 = document.querySelector('.services h1');
 const serviceP = document.querySelector('.services p');
 const serviceDiv = document.querySelector('.services div:last-child');
@@ -252,11 +252,11 @@ let activeElement = 0;
 
 // init styles
 if (window.innerWidth <= 600 ) {
-  serviceImg.style.backgroundImage = servicePicLow[activeElement];
+  serviceImg.src = servicePicLow[activeElement];
 } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-  serviceImg.style.backgroundImage = servicePicMid[activeElement];
+  serviceImg.src = servicePicMid[activeElement];
 } else if(window.innerWidth > 1024){
-  serviceImg.style.backgroundImage = servicePic[activeElement];
+  serviceImg.src = servicePic[activeElement];
 }
 serviceH1.textContent = serviceHeader[activeElement];
 serviceP.textContent = serviceText[activeElement];
@@ -283,11 +283,11 @@ document.querySelector('.mainContainer').addEventListener('touchend', (e) => {
     }
   
     if (window.innerWidth <= 600 ) {
-      serviceImg.style.backgroundImage = servicePicLow[activeElement];
+      serviceImg.src = servicePicLow[activeElement];
     } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-      serviceImg.style.backgroundImage = servicePicMid[activeElement];
+      serviceImg.src = servicePicMid[activeElement];
     } else if(window.innerWidth > 1024){
-      serviceImg.style.backgroundImage = servicePic[activeElement];
+      serviceImg.src = servicePic[activeElement];
     }
     serviceH1.textContent = serviceHeader[activeElement];
     serviceP.textContent = serviceText[activeElement];
@@ -307,11 +307,11 @@ document.querySelector('.mainContainer').addEventListener('touchend', (e) => {
     }
   
     if (window.innerWidth <= 600 ) {
-      serviceImg.style.backgroundImage = servicePicLow[activeElement];
+      serviceImg.src = servicePicLow[activeElement];
     } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-      serviceImg.style.backgroundImage = servicePicMid[activeElement];
+      serviceImg.src = servicePicMid[activeElement];
     } else if(window.innerWidth > 1024){
-      serviceImg.style.backgroundImage = servicePic[activeElement];
+      serviceImg.src = servicePic[activeElement];
     }
     serviceH1.textContent = serviceHeader[activeElement];
     serviceP.textContent = serviceText[activeElement];
@@ -331,11 +331,11 @@ document.querySelector('.mainContainer').addEventListener('touchend', (e) => {
   }
 
   if (window.innerWidth <= 600 ) {
-    serviceImg.style.backgroundImage = servicePicLow[activeElement];
+    serviceImg.src = servicePicLow[activeElement];
   } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-    serviceImg.style.backgroundImage = servicePicMid[activeElement];
+    serviceImg.src = servicePicMid[activeElement];
   } else if(window.innerWidth > 1024){
-    serviceImg.style.backgroundImage = servicePic[activeElement];
+    serviceImg.src = servicePic[activeElement];
   }
   serviceH1.textContent = serviceHeader[activeElement];
   serviceP.textContent = serviceText[activeElement];
@@ -357,11 +357,11 @@ btnLeft.addEventListener('click', () => {
   }
   
   if (window.innerWidth <= 600 ) {
-    serviceImg.style.backgroundImage = servicePicLow[activeElement];
+    serviceImg.src = servicePicLow[activeElement];
   } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-    serviceImg.style.backgroundImage = servicePicMid[activeElement];
+    serviceImg.src = servicePicMid[activeElement];
   } else if(window.innerWidth > 1024){
-    serviceImg.style.backgroundImage = servicePic[activeElement];
+    serviceImg.src = servicePic[activeElement];
   }
   serviceH1.textContent = serviceHeader[activeElement];
   serviceP.textContent = serviceText[activeElement];
@@ -380,11 +380,11 @@ btnRight.addEventListener('click', () => {
   }
   
   if (window.innerWidth <= 600 ) {
-    serviceImg.style.backgroundImage = servicePicLow[activeElement];
+    serviceImg.src = servicePicLow[activeElement];
   } else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
-    serviceImg.style.backgroundImage = servicePicMid[activeElement];
+    serviceImg.src = servicePicMid[activeElement];
   } else if(window.innerWidth > 1024){
-    serviceImg.style.backgroundImage = servicePic[activeElement];
+    serviceImg.src = servicePic[activeElement];
   }
   serviceH1.textContent = serviceHeader[activeElement];
   serviceP.textContent = serviceText[activeElement];
