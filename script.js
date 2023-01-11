@@ -130,8 +130,9 @@ window.addEventListener('mousemove', function (e) {
 
 // main script
 const servicePic = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior  3840x2160.png")'
-const servicePicMid = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior 1024x1000.png")'
-const servicePicLow = ['img/JS_html_css_icons_1820x522px.png', 'img/retouching_tools_icons_1460x644px.png']; // 'url("img/interior 600x1000.png")'
+const servicePicMid = ['img/JS_html_css_icons_1000x287px.png', 'img/retouching_tools_icons_1000x442px.png']; // 'url("img/interior 1024x1000.png")'
+const servicePicLow = ['img/JS_html_css_icons_500x144px.png', 'img/retouching_tools_icons_500x221px.png']; // 'url("img/interior 600x1000.png")'
+
 const serviceHeader = ["Web design", "Retouching"]; // "3d design"
 const serviceText = ["I am a front-end developer experienced in creating modern, static websites. I handle website design and development from scratch, as well as modernization and optimization. I use the latest technologies and tools such as HTML, CSS, and JavaScript to ensure the best results. In addition I specialize in creating animated backgrounds with HTML canvas and personalized icons that will capture the attention of visitors and make your website stand out from others", "I have solid experience in retouching, color correcting and image processing wide range of photos for e-commerce and notable magazines such as Prevention, Maxim, Glamour, Men's Health, Rolling Stone, Vogue, Vanity Fair, Allure, National Geographic. With my skills and experience, I am able to handle the most demanding photo retouching tasks and provide the best results. Whether you need photos for your online store, magazine, or web, my services are perfect for you"]; // "product presentation, interior visualisation, real estate visualisation"
 const serviceImg = document.querySelector('.services img');
@@ -147,18 +148,18 @@ const olioli = document.querySelector('.olioli');
 const btnLeft = document.querySelector('.services i:nth-child(3)');
 const btnRight = document.querySelector('.services i:nth-child(4)');
 
+// inicjalizacja zdjęć
+if (window.innerWidth <= 600 ) {
+  document.querySelector('.about img').src = 'img/PBLogo horizontal_500x208px.png';
+  document.querySelector('.contact img').src = 'img/contact 500x104px.png';
+} else if (window.innerWidth > 600 && window.innerWidth <= 1024) {
+  document.querySelector('.about img').src = 'img/PBLogo horizontal_1000x415px.png';
+  document.querySelector('.contact img').src = 'img/contact 1000x207px.png';
+} else if(window.innerWidth > 1024){
+  document.querySelector('.about img').src = 'img/PBLogo horizontal_2000x974px.png';
+  document.querySelector('.contact img').src = 'img/contact 1657x343px.png';
+}
 
-
-// logo home button
-// logo.forEach(item => {
-//   item.addEventListener('click', function(){
-//     menu.classList.remove('active');
-//     burger.classList.remove('active');
-//     content.forEach(item => {
-//       item.classList.remove('active');
-//     })
-//   })
-// })
 
 // opening menu
 burger.addEventListener('click', function(){
@@ -180,7 +181,6 @@ menuLi.forEach(li =>{
                 item.classList.add('active')
             }else {
               item.classList.remove('active');
-              // olioli.classList.remove('inactive')
             }
         })
     })
@@ -207,16 +207,19 @@ const textAppearAnimate = [
   { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
   { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
 ];
+
 const swipeAnimateLeft = [
   { transform: 'translate(-5px)' },
   { transform: 'translate(5px)' },
   { transform: 'translate(-5px)' },
 ];
+
 const swipeAnimateRight = [
   { transform: 'translate(5px)' },
   { transform: 'translate(-5px)' },
   { transform: 'translate(5px)' },
 ];
+
 
 const showTiming = {
   duration: 1000,
