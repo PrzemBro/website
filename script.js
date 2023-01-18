@@ -144,9 +144,9 @@ const menuLi = [...document.querySelectorAll('li')];
 const burger = document.querySelector('.OliNav');
 const content = document.querySelectorAll('.mainContainer>div');
 const logo = document.querySelectorAll('.Oli');
-const olioli = document.querySelector('.olioli');
-const btnLeft = document.querySelector('.services i:nth-child(3)');
-const btnRight = document.querySelector('.services i:nth-child(4)');
+const przemBro = document.querySelector('.name');
+const btnLeft = document.querySelector('.services i:nth-child(1)');
+const btnRight = document.querySelector('.services i:nth-child(2)');
 
 // inicjalizacja zdjęć
 if (window.innerWidth <= 600 ) {
@@ -172,7 +172,7 @@ menuLi.forEach(li =>{
     li.addEventListener('click', function(){
         menu.classList.toggle('active');
         burger.classList.toggle('active');
-        olioli.classList.add('inactive');
+        przemBro.classList.add('inactive');
       
         const current = this.getAttribute('id');
         
@@ -188,7 +188,7 @@ menuLi.forEach(li =>{
 
 
 document.querySelector('#home').addEventListener('click', () => {
-  olioli.classList.remove('inactive')
+  przemBro.classList.remove('inactive')
 })
 
 
@@ -241,8 +241,8 @@ const swipeTiming = {
   iterations: Infinity,
 }
 
-document.querySelector('.services i:nth-child(1)').animate(swipeAnimateLeft, swipeTiming);
-document.querySelector('.services i:nth-child(2)').animate(swipeAnimateRight, swipeTiming);
+document.querySelector('.services i:nth-child(3)').animate(swipeAnimateLeft, swipeTiming);
+document.querySelector('.services i:nth-child(4)').animate(swipeAnimateRight, swipeTiming);
 
 
 
